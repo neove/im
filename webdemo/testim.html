@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="webim_chat_box wrapper box-sizing">
+        <div class="content">
+            <div class="right-panel hide radius5px" id="j-rightPanel">
+                <!-- 聊天面板 -->
+                <div class="chat-box">
+                    <div class="title" id="j-chatTitle">
+                        <img src="" width="56" height="56" class="radius-circle img" id="headImg" />
+                        <span id="j-nickName"></span>
+                        <div class="cloudMsg tc radius4px" data-record-id="" id="j-cloudMsg"><i class="icon icon-team-info"></i>
+                            <p>云记录</p>
+                        </div>
+                        <div class="team-info hide tc radius4px" data-team-id="" id="j-teamInfo"><i class="icon icon-team-info"></i>
+                            <p>资料</p>
+                        </div>
+                    </div>
+                    <div class="chat-content box-sizing" id="j-chatContent">
+                        <!-- 聊天记录 -->
+
+                    </div>
+                    <div class="u-chat-notice">您已退出</div>
+                    <div class="chat-mask"></div>
+                    <div class="chat-editor box-sizing" id="j-chatEditor" data-disabled="1">
+                        <div id="emojiTag" class="m-emojiTag"></div>
+                        <a href="javascript:;" class="u-emoji" id="j-showEmoji"></a>
+                        <span class="msg-type" id="j-msgType">
+							<a href="javascript:;" class="icon icon-file" data-type="file"></a>
+						</span>
+                        <form action="#" id="j-uploadForm">
+                            <input multiple="multiple" type="file" name="file" id="j-uploadFile" class="hide" />
+                        </form>
+                        <textarea id="j-messageText" class="msg-input box-sizing radius5px" rows="1" autofocus="autofocus" maxlength="500"></textarea>
+                        <a href="javascript:;" class="btn-send radius5px" id="j-sendBtn">发送</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input class="im-search"><span class="im-search-icon"></span>
+       
+    </div>
+</body>
+
+</html>
