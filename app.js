@@ -8,7 +8,7 @@ var https = require('https');
 var urlParser = require('url');
 var querystring = require('querystring');
 var user = [];
-var myIm = new ServerApi('3dc5da62180a4c81af0e1d571dd32bcc', '9569263203b9');//实例化请求api
+var myIm = new ServerApi('c770f5814bf42fb83330d3b20f14ba1a', '1c942502a1fc');//实例化请求api
 //读取文件的user信息
 fs.readFile(path.join(__dirname, 'userdata.js'), function (err, bytesRead) {
     if (err) throw err;

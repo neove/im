@@ -128,37 +128,60 @@ var yunXin = {
                 $(this).val('');
             }
         })
+
         /////////////////////////////////////////////////////////////////////////通过点击在线头像，发起会话列表
         // this.$list_os.find('a').attr('href','');
-        this.$list_os.delegate("a", 'click', function () {
-            var tita_id = $(this).attr('href').slice(3);
-            var tita_name = '';
-            var tita_icon = '';
-            if ($(this).find('img').length===0) {
-                tita_name = $(this).find("span").attr('original-title');
-                tita_icon = "http://bpic.588ku.com/element_origin_min_pic/01/31/87/96573b585a7c9c4.jpg";//use a default icon
-            } else {
-                tita_name = $(this).find('img').attr('alt');
-                tita_icon = $(this).find('img').attr('src');
-            }
-            //下面发起注册请求
-            var userData = {
-                "accid": tita_id,
-                "name": tita_name,
-                "icon": tita_icon
-            }
-            console.log(userData);
-            $.ajax({
-                type: "POST",
-                url: 'http://localhost:8888',   //  这里要改成服务器的地址
-                data: userData,
-                success: function (data) {
-                    $('#im-wrapper').css({ "right": "0" })//划出会话框
-                    that.openChatBox(JSON.parse(data).info.accid, "p2p");
-                }
-            })
-            return false;
-        })
+        // this.$list_os.delegate("a", 'click', function () {
+        //     var tita_id = $(this).attr('href').slice(3);
+        //     var tita_name = '';
+        //     var tita_icon = '';
+        //     if ($(this).find('img').length === 0) {
+        //         tita_name = $(this).find("span").attr('original-title');
+        //         tita_icon = "http://bpic.588ku.com/element_origin_min_pic/01/31/87/96573b585a7c9c4.jpg";//use a default icon
+        //     } else {
+        //         tita_name = $(this).find('img').attr('alt');
+        //         tita_icon = $(this).find('img').attr('src');
+        //     }
+        //     //下面发起注册请求
+        //     var userData = {
+        //         "accid": tita_id,
+        //         "name": tita_name,
+        //         "icon": tita_icon
+        //     }
+        //     console.log(userData);
+        //     $.ajax({
+        //         async:false,
+        //         type: "POST",
+        //         url: 'http://localhost:8888',   //  这里要改成服务器的地址
+        //         data: userData,
+        //         success: function (data) {
+        //             $('#im-wrapper').css({ "right": "0" })//划出会话框
+        //             that.openChatBox(JSON.parse(data).info.accid, "p2p");
+        //         }
+        //     })
+        //     return false;
+        // })
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

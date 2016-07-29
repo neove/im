@@ -11,25 +11,14 @@ function addScript(url) {
     else {
         document.documentElement.appendChild(script);
     }
+}
 
-}
-//放到服务器之后要改ip地址 检测tita用户 然后设置相应的tooken
-var im_user = [
-    { "token": "9a6242fc751786f404a24d794f5b5d0b", "accid": "beisen000", "name": "徐海彬" },
-    { "token": "85e1032b0fd43a345f0982daa8db5685", "accid": "beisen001", "name": "张倩" },
-    { "token": "897ce1c9d480b1d53f710f049b617b08", "accid": "beisen002", "name": "李国明" },
-    { "token": "7fce6142dd7c1e57a9e6c877f077beb0", "accid": "beisen003", "name": "青岛李贺" },
-    { "token": "213cd0db7f8ea2a0d7ded73966aad1d3", "accid": "beisen004", "name": "尹吉凯" },
-    { "token": "85306c9edd98d0342c6e1b8a8b6e1e44", "accid": "beisen005", "name": "孔常柱" }
-];
-for (var i = 0; i < im_user.length; i++) {
-    if (im_user[i].name === $(".user-name").html()) {
-        document.cookie = "uid=" + im_user[i].accid;
-        document.cookie = "sdktoken=" + im_user[i].token;
-        break;
-    }
-    continue;
-}
+//点击书签之后同步注册和设置cookie
+
+
+
+document.cookie = "uid=109124247";
+document.cookie = "sdktoken=d4852c79f53bd00bd2c95e28c1bd8abc";
 addScript("http://10.189.1.99:8888/webdemo/3rd/Web_SDK_Base_v2.4.0.js");
 addScript("http://10.189.1.99:8888/webdemo/3rd/Web_SDK_NIM_v2.4.0.js");
 addScript("http://10.189.1.99:8888/webdemo/im/js/sdk.js?v=2")
@@ -47,6 +36,32 @@ setTimeout(function () {
     div_im.setAttribute('id', "bot_chat");
     div_im.innerHTML = "<img src='http://10.189.1.99:8888/webdemo/im/images/notice.png' class='panel_img'></img><b class='u-unread hide bot_unread'>0</b>"
     body.appendChild(div_im);
+    //  $('#bot_chat').bind('click', function () {
+    //         alert(3);
+            // debugger;
+            // var tita_id = $('.list-ul-box').find('li:eq(2)').find('a').attr('href').slice(26, 35);
+            // var tita_name = $('.user-info-region .user-name').html();
+            // var tita_icon = '';
+            // if ($('.user-info-region .user-photo').length === 0) {
+            //     tita_icon = "http://bpic.588ku.com/element_origin_min_pic/01/31/87/96573b585a7c9c4.jpg";//use a default icon
+            // } else {
+            //     tita_icon = $('.user-info-region .user-photo img').attr('src');
+            // }
+            // //下面发起注册请求
+            // var userData = {
+            //     "accid": tita_id,
+            //     "name": tita_name,
+            //     "icon": tita_icon
+            // }
+            // $.ajax({
+            //     type: "POST",
+            //     url: 'http://localhost:8888',   //  这里要改成服务器的地址
+            //     data: userData,
+            //     success: function (data) {
+            //         console.log(3);
+            //     }
+            // })
+        // })
     //创建link
     function addCssByLink(url) {
         var doc = document;
@@ -137,6 +152,6 @@ setTimeout(function () {
     $('#bot_chat').click(function () {
         $('#im-wrapper').css({ "right": 0 })
     })
-   
-   
+
+
 }, 1000);
