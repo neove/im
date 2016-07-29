@@ -6,7 +6,7 @@ var SDKBridge = function (ctr,data) {
 		userUID = readCookie('uid'),
 		that = this;
 	if(!sdktoken){
-     	window.location.href = './index.html';
+     	alert("sorry，您还没有注册titaIM即时通讯，请联系15154258295");
     	return;
 	}
 	//缓存需要获取的用户信息账号

@@ -22,7 +22,7 @@
     top:3px;
 }
 .list_icl .btn-cancel{
-    width:53px !important;
+    width:54px !important;
 }
 #bot_chat{
     width: 67px;
@@ -415,6 +415,8 @@ html, body {
     color: #3a4a59;
     font-size: 12px;
     padding-top: 5px;
+    position: relative;
+    top: -4px;
 }
 .item-you .msg-text {
     float: left;

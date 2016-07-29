@@ -33,11 +33,11 @@ function checkUser(accid) {
 //将新注册的用户拉入一个群，以便测试
 function addToGroup(user) {
 	var data = {
-		'tid': 7521922,
-		'owner': "beisen01",
+		'tid': "7595055",
+		'owner': "109124247",
 		'members': [user],
 		'magree': '0',
-		'msg': '大家好我是你的好朋友',
+		'msg': '大家好我是森豆007'
 	}
 	myIm.addIntoGroup(data, function (err, result) {
 		if (err) {
@@ -71,14 +71,15 @@ http.createServer(function (req, res) {
 					res.end(JSON.stringify(checkUser(imdata.accid)));
 				}
 			})
+			addToGroup(imdata.accid);
 			//调用更新一下用户信息
-			myIm.updateUinfo(imdata, function (error, data) {
-				if (error) {
-					throw (error)
-				} else {
-					console.log(data)
-				}
-			})
+			// myIm.updateUinfo(imdata, function (error, data) {
+			// 	if (error) {
+			// 		throw (error)
+			// 	} else {
+			// 		console.log(data)
+			// 	}
+			// })
 		})
 	} else {
 		fs.readFile("." + pathname, function readData(err, data) {
